@@ -6,7 +6,7 @@ license="CC0 1.0"
 [[mods]]
 modId="vkselect"
 version="${version}"
-displayName="Vulkan Device Select"
+displayName="Vulkan Device Selector"
 authors="vkselect contributors"
 iconFile="vkselect.png"
 description='''

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "vkselect",
   "version": "${version}",
-  "name": "Vulkan Device Select",
+  "name": "Vulkan Device Selector",
   "description": "Choose which Vulkan GPU Minecraft uses. Adds a /vkselect command and a device selection overlay to the main menu, the pause menu and the mod menu.",
   "authors": [
     "vkselect contributors"
