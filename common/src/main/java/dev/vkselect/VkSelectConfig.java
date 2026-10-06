@@ -42,7 +42,7 @@ public final class VkSelectConfig {
     private boolean showInMainMenu = true;
 
     /** Whether the overlay button is added to the in-game pause menu. */
-    private boolean showInPauseMenu = true;
+    private boolean showInPauseMenu = false;
 
     /** Whether the device list should be logged while the game picks a device. */
     private boolean logDeviceSelection = true;
