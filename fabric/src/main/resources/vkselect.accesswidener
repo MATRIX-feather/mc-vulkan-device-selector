@@ -1,0 +1,2 @@
+accessWidener v2 official
+accessible method com/mojang/renderpearl/backend/vulkan/VulkanBackend checkDeviceSuitability (Lorg/lwjgl/vulkan/VkPhysicalDevice;Ljava/util/Set;Ljava/util/Set;)Lcom/mojang/renderpearl/api/device/BackendCreationException;

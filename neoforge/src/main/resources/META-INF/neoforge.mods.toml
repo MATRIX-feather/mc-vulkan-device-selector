@@ -1,0 +1,41 @@
+# NeoForge mod metadata for Vulkan Device Select.
+# Dependencies are declared per mod id; "side" only exists on the dependency blocks.
+
+license="CC0 1.0"
+
+[[mods]]
+modId="vkselect"
+version="${version}"
+displayName="Vulkan Device Select"
+authors="vkselect contributors"
+iconFile="vkselect.png"
+description='''
+Choose which Vulkan GPU Minecraft uses.
+
+/vkselect list  - list every Vulkan device (including software renderers)
+/vkselect select <keyword> - store the first device matching the keyword
+
+The same selection is available as an overlay from the main menu, the pause menu and the mod list.
+'''
+displayURL="https://github.com/example/minecraft-vulkan-device-selector"
+
+# Loads common/src/main/resources/vkselect.mixins.json through FML.
+[[mixins]]
+config="vkselect.mixins.json"
+
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
+
+[[dependencies.vkselect]]
+modId="neoforge"
+type="required"
+versionRange="[26.3.0.0-beta,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.vkselect]]
+modId="minecraft"
+type="required"
+versionRange="[26.3,26.4)"
+ordering="NONE"
+side="CLIENT"

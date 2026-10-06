@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+.gradle-home/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.eclipse/
+*.launch
+run/
+runs/
+
+# OS
+.DS_Store
+
+# Local research scratch (decompiled Minecraft, downloaded jars)
+.research/
+
+temp/

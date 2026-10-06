@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "vkselect",
+  "version": "${version}",
+  "name": "Vulkan Device Select",
+  "description": "Choose which Vulkan GPU Minecraft uses. Adds a /vkselect command and a device selection overlay to the main menu, the pause menu and the mod menu.",
+  "authors": [
+    "vkselect contributors"
+  ],
+  "contact": {
+    "sources": "https://github.com/example/minecraft-vulkan-device-selector"
+  },
+  "license": "CC0 1.0",
+  "icon": "assets/vkselect/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.vkselect.fabric.VkSelectFabricClient"
+    ],
+    "modmenu": [
+      "dev.vkselect.fabric.VkSelectModMenu"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "vkselect.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "recommends": {
+    "modmenu": "*"
+  }
+}

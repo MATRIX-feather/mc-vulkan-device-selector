@@ -1,0 +1,10 @@
+// Root project: shared metadata for the two loader modules.
+//
+// The loader independent code lives in common/src/main and is added as an extra source directory
+// by both module builds, so it is compiled twice - once against Fabric and once against NeoForge -
+// without needing a third artifact.
+
+allprojects {
+    group = project.property('group_id')
+    version = project.property('mod_version')
+}

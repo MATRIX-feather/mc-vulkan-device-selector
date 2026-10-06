@@ -1,0 +1,60 @@
+plugins {
+    id 'net.neoforged.moddev' version "${mdg_version}"
+}
+
+base {
+    archivesName = "vkselect-neoforge-${project.minecraft_version}"
+}
+
+// The loader independent sources are shared with the Fabric module.
+sourceSets {
+    main {
+        java.srcDir rootProject.file('common/src/main/java')
+        resources.srcDir rootProject.file('common/src/main/resources')
+    }
+}
+
+neoForge {
+    version = project.neoforge_version
+
+    runs {
+        client {
+            client()
+        }
+    }
+
+    mods {
+        "vkselect" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+// No extra mod dependencies: only the API shipped by NeoForge itself is used.
+dependencies {
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 25
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand 'version': project.version
+    }
+}
+
+jar {
+    from(rootProject.file('LICENSE')) {
+        rename { "${it}_vkselect" }
+    }
+}
